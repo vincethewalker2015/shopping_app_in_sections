@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   root "pages#home"
   
   resources :shoppings
+  resources :butchers
+  resources :drinks
+  resources :vegetables
 end

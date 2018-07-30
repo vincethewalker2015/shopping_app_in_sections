@@ -1,0 +1,26 @@
+<div class="center jumbotron jumboIndex">
+  <h2 class="text-center">Meat Section</h2>
+</div>
+<%= render "layouts/flash" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well">
+        <p><%= link_to "Add an Item", new_butcher_path, class: "btn btn-success" %></p>
+        <table>
+          <tr>
+            <th class="boldText">Meat Section</th>
+          </tr>
+          <% @butchers.each do |meats| %>
+            <tr>
+              <td class="itemsFont"><%= meats.item %><td>
+              <td><%= link_to "Edit Item", edit_butcher_path(meats), class: "btn btn-primary bdr" %></td>
+              <td><%= link_to "Delete Item", butcher_path(meats), method: :delete, data: {confirm: "Deleted" }, class: "btn btn-danger bdr" %></td>
+            </tr>
+          <% end %>
+        </table>
+       
+      </div>
+    </div>
+  </div>
+</div>

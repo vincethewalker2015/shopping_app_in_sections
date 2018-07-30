@@ -35,6 +35,9 @@ class ShoppingsController < ApplicationController
   
   def index
     @shop = Shopping.all
+    @butchers = Butcher.all
+    @drinks = Drink.all
+    @veggies = Vegetable.all
   end
   
   def destroy

@@ -1,0 +1,13 @@
+<div class="center jumbotron jumboChild">
+  <h2 class="text-center">Drinks</h2>
+</div>
+
+<%= render "layouts/flash" %>
+<div class="well">
+<p class="itemsFont">
+  <span class="boldText">Drinks:</span> <%= @drink.item %>
+</p>
+
+<%= link_to "Edit this item", edit_drink_path(@drink), class: "btn btn-warning" %> |
+<%= link_to "Back To Shopping list", drinks_path, class: "btn btn-primary" %>
+</div>

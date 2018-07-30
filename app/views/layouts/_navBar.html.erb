@@ -10,9 +10,15 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Add an Item", new_shopping_path %></li>
-            <li><%= link_to "Shopping List", shoppings_path %></li>
-          </ul>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add an Item <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Add A New Drink", new_drink_path  %></li>
+                <li><%= link_to "Meat / Wine / Fish", new_butcher_path %></li>
+            		<li><%= link_to "Toiletries", new_shopping_path %></li>
+            		<li><%= link_to "Fruit and Vegetables", new_vegetable_path %></li>
+                <li><%= link_to "Shopping List", shoppings_path %></li>
+            </ul>
           </div>
         </nav>
       </div>

@@ -9,17 +9,71 @@
         <p><%= link_to "Add an Item", new_shopping_path, class: "btn btn-success" %></p>
         <table>
           <tr>
-            <th class="boldText">Items</th>
+            <th class="boldText">Toiletries:</th>
           </tr>
           <% @shop.each do |shoppings| %>
             <tr>
               <td class="itemsFont"><%= shoppings.item %><td>
               <td><%= link_to "Edit Item", edit_shopping_path(shoppings), class: "btn btn-primary bdr" %></td>
-              <td><%= link_to "Delete Item", shopping_path(shoppings), method: :delete, data: {confirm: "Deleted" }, class: "btn btn-danger bdr" %></td>
+              <td><%= link_to "Delete Item", shopping_path(shoppings), method: :delete, class: "btn btn-danger bdr" %></td>
             </tr>
           <% end %>
         </table>
+        </div>
         
+        <!-- Meats Section -->
+        
+        <div class="well">
+         <p><%= link_to "Add Meat / Fish / Chicken", new_butcher_path, class: "btn btn-success" %></p>
+        <table>
+          <tr>
+            <th class="boldText">Meat, Fish, Chicken:</th>
+          </tr>
+          <% @butchers.each do |meats| %>
+            <tr>
+              <td class="itemsFont"><%= meats.item %><td>
+              <td><%= link_to "Edit Item", edit_butcher_path(meats), class: "btn btn-primary bdr" %></td>
+              <td><%= link_to "Delete Item", butcher_path(meats), method: :delete, class: "btn btn-danger bdr" %></td>
+            </tr>
+          <% end %>
+        </table>
+        </div>
+        
+        <!-- Drinks Section -->
+        
+        <div class="well">
+         <p><%= link_to "Add a Drink", new_drink_path, class: "btn btn-success" %></p>
+        <table>
+          <tr>
+            <th class="boldText">Drinks:</th>
+          </tr>
+          <% @drinks.each do |drinks| %>
+            <tr>
+              <td class="itemsFont"><%= drinks.item %><td>
+              <td><%= link_to "Edit Item", edit_drink_path(drinks), class: "btn btn-primary bdr" %></td>
+              <td><%= link_to "Delete Item", drink_path(drinks), method: :delete, class: "btn btn-danger bdr" %></td>
+            </tr>
+          <% end %>
+        </table>
+        </div>
+        
+        <!-- Fruit and Veg Section -->
+        
+        <div class="well">
+         <p><%= link_to "Add Fruit / Vegetable", new_vegetable_path, class: "btn btn-success" %></p>
+        <table>
+          <tr>
+            <th class="boldText">Fruit & Vegetables:</th>
+          </tr>
+          <% @veggies.each do |veg| %>
+            <tr>
+              <td class="itemsFont"><%= veg.item %><td>
+              <td><%= link_to "Edit Item", edit_vegetable_path(veg), class: "btn btn-primary bdr" %></td>
+              <td><%= link_to "Delete Item", vegetable_path(veg), method: :delete, class: "btn btn-danger bdr" %></td>
+            </tr>
+          <% end %>
+        </table>
+        </div>
       </div>
     </div>
   </div>
